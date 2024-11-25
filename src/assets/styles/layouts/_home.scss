@@ -65,27 +65,14 @@ footer {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  position: relative;
-
-  .img {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    width: 70%;
-    height: 90%;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    opacity: 0.4;
-    filter: hue-rotate(140deg);
-  }
+ 
 
   .poster{
     z-index: 50;
+    width: 90vw;
 
-    width: 70%;
-    height: 90%;
-    
     margin: auto;
     margin-top: 0;
 
@@ -94,7 +81,7 @@ footer {
 
     h1 {
       font-family: $font-title;
-      font-size: 4em;
+      font-size: 2em;
       margin-bottom: 0;
       padding: 0.5em;
     }
@@ -102,7 +89,7 @@ footer {
     h2{
       font-family: $font-title;
       text-transform: uppercase;
-      font-size: 3.5em;
+      font-size: 1.5em;
     }
     
     .year {
@@ -118,7 +105,7 @@ footer {
       text-transform: uppercase;
       line-height: 1.5;
       font-weight: bold;
-      font-size: 1.2em;
+      font-size: 1em;
       
     }
   }
@@ -126,48 +113,97 @@ footer {
 }
 
 @supports (display:grid) {
-  @media (min-width: 0px){
-    .poster {
-      display: grid;
-      grid-template-columns: 6em 28em 1fr 28em 5em;
-      grid-template-rows: 3fr 0.5fr 2fr 2fr;
-    }
+  @media (min-width: 700px){
+    .home-container{
+      position: relative;
 
-    h1{
-      grid-column: 4 / -1;
-      grid-row: 1 / 2;
-    }
-
-    .edition {
-      grid-column: 1 / 2;
-      grid-row: 1 / -1;
-
-      display: flex;
-      align-items: center;
-
-      h2 {
-        width: fit-content;
-        height: fit-content;
-        transform-origin: left center;
-        transform: rotate(-90deg) translateX(-50%);
-        margin-left: 1em;
-        white-space: nowrap;
+      .img {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        width: 70%;
+        height: 90%;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+        opacity: 0.4;
+        filter: hue-rotate(140deg);
+        object-fit: cover;
       }
-    }
 
-    .year {
-      grid-column: 5 / 6;
-      grid-row: 3 / -1;
-    }
+      .poster {
+        display: grid;
+        grid-template-columns: 6em fit-content(18em) 1fr minmax(10em, 28em) 5em;
+        grid-template-rows: 3fr 0.5fr 2fr 2fr;
+        
+        width: 70%;
+        height: 90%;
+      }
 
-    .speakers {
-      grid-column: 2 / 3;
-      grid-row: 3 / 4;
-    }
+      h1 {
+        font-family: $font-title;
+        font-size: 4em;
+        margin-bottom: 0;
+        padding: 0.5em;
+      }
 
-    .date {
-      grid-column: 2 / -2;
-      grid-row: 4 / 5;
+      h2{
+        font-family: $font-title;
+        text-transform: uppercase;
+        font-size: 3.5em;
+      }
+      
+      .year {
+        margin: auto;
+      }
+    
+      .speakers {
+        line-height: 1.3;
+        margin-bottom: 1em;
+      }
+      
+      .date {
+        text-transform: uppercase;
+        line-height: 1.5;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      h1{
+        grid-column: 4 / -1;
+        grid-row: 1 / 2;
+      }
+
+      .edition {
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+
+        display: flex;
+        align-items: center;
+
+        h2 {
+          width: fit-content;
+          height: fit-content;
+          transform-origin: left center;
+          transform: rotate(-90deg) translateX(-50%);
+          margin-left: 1em;
+          white-space: nowrap;
+        }
+      }
+
+      .year {
+        grid-column: 5 / 6;
+        grid-row: 3 / -1;
+      }
+
+      .speakers {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+      }
+
+      .date {
+        grid-column: 2 / -2;
+        grid-row: 4 / 5;
+      }
     }
   }
 }
