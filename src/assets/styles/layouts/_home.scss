@@ -31,6 +31,11 @@ header {
   .nav-link:hover {
     color: $highlight;
   }
+
+  img {
+    max-width: 50px;
+    height: auto;
+  }
   
 }
 
@@ -55,6 +60,10 @@ footer {
 
   .nav-link:hover, .social-icon:hover{
     color: $highlight;
+  }
+
+  p {
+    margin: 0;
   }
   
 }
