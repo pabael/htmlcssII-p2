@@ -1,0 +1,53 @@
+<div class="form-container container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <form action="/thanks" method="POST" class="p-4 border rounded shadow-sm bg-light" data-netlify="true">
+        <input type="hidden" name="form-name" value="Formulario de Inscripción">
+        
+        <h2 class="mb-4 text-center">Formulario de Inscripción</h2>
+
+        <fieldset class="mb-4">
+          <legend class="h4">Información Personal</legend>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre completo</label>
+            <input type="text" id="name" name="name" class="form-control" required placeholder="Tu nombre completo">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" id="email" name="email" class="form-control" required placeholder="tuemail@ejemplo.com">
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Teléfono</label>
+            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+34 123 456 789">
+          </div>
+        </fieldset>
+
+        <fieldset class="mb-4">
+          <legend class="h4">Participación</legend>
+          <div class="mb-3">
+            <label for="category" class="form-label">Categoría de participación</label>
+            <select id="category" name="category" class="form-select" required>
+              <option value="" disabled selected>Elige una categoría</option>
+              <option value="estudiante">Estudiante</option>
+              <option value="profesional">Profesional</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="motivation" class="form-label">¿Por qué quieres participar?</label>
+            <textarea id="motivation" name="motivation" rows="4" class="form-control" placeholder="Cuéntanos tus motivos..." required></textarea>
+          </div>
+        </fieldset>
+
+        <div class="mb-3 form-check d-flex justify-content-center">
+          <input type="checkbox" id="terms" name="terms" class="form-check-input" required>
+          <label for="terms" class="form-check-label">Acepto los <a href="#" class="text-decoration-none">términos y condiciones</a>.</label>
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Enviar Inscripción</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

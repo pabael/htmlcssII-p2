@@ -1,0 +1,10 @@
+.form-container{
+  button{
+    background-color: $highlight;
+    border-color: $highlight;
+  }
+  button:hover{
+    background-color: $main;
+    border-color: $main;
+  }
+}
