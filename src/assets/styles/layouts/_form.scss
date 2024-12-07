@@ -1,4 +1,41 @@
-.form-container{
+$form-main-color: color(display-p3 0.45 0.15 0.1);
+$form-accent: hwb(220 30% 20%);
+
+.form-container {
+  width: 100vw;
+  padding: 5lvmin;
+  
+  .row {
+    margin-top: 3dvmin;
+    max-width: 80vw; 
+  }
+  
+  .col-md-8 {
+    padding: 4cqmin;
+  }
+  
+  .form-check {
+    margin-bottom: 2svmin;
+  }
+  
+  .btn-primary {
+    font-size: 3lvmin;
+    padding: 1.5lvmin 2lvmin;
+  }
+
+  .form-label {
+    color: $form-main-color;
+  }
+
+  .form-control {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid $form-main-color;
+  }
+
+  .form-check-input {
+    border-color: $form-main-color;
+  }
+
   button{
     background-color: $highlight;
     border-color: $highlight;
