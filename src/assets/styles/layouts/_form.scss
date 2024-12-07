@@ -7,7 +7,6 @@ $form-accent: hwb(220 30% 20%);
   
   .row {
     margin-top: 3dvmin;
-    max-width: 80vw; 
   }
   
   .col-md-8 {
@@ -40,8 +39,20 @@ $form-accent: hwb(220 30% 20%);
     background-color: $highlight;
     border-color: $highlight;
   }
+
   button:hover{
     background-color: $main;
     border-color: $main;
   }
+
+  .d-grid{
+    container-type: inline-size;
+
+    @container(max-width: 300px){
+      button{
+        font-size: 4lvmin;
+      }
+    }
+  }
+  
 }

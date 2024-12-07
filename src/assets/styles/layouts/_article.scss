@@ -6,6 +6,7 @@
     margin: 0 auto;
     line-height: 1.6;
     color: #333;
+    container-type: inline-size;
 
     :is(h1, h2, h3) {
       font-family: $font-title;
@@ -64,7 +65,7 @@
     }
     
     ul {
-      padding-left: 40px;
+      padding-left: 0px;
 
       li {
         margin-bottom: 8px;
@@ -86,12 +87,14 @@
       }
     }
 
-    figure {
-      margin: 24px 0;
+    section figure {
+      margin: 24px auto;
       text-align: center;
+      width: 80%;
+      height: auto;
       
       img {
-        max-width: 500px;
+        width: 100%;
         height: auto;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -101,6 +104,29 @@
         margin-top: 8px;
         font-size: 0.9rem;
         color: #666;
+      }
+    }
+
+    @container(max-width:1180px){
+      section:not(:has(ul)):not(:has(blockquote)){
+        flex-direction: column;
+      }
+    }
+
+    @container(max-width:800px){
+      section, footer{
+        max-width: 70%;
+      }
+
+    }
+
+    @container(max-width:400px){
+      header{
+        margin: 0px;
+
+        figure img{
+          max-width: 200px;
+        }
       }
     }
   }
