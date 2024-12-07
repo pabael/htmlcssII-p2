@@ -1,10 +1,17 @@
 .article-container{
   width: 100vw;
+
   article {
     max-width: 100%;
     margin: 0 auto;
     line-height: 1.6;
     color: #333;
+
+    :is(h1, h2, h3) {
+      font-family: $font-title;
+      color: $main;
+      text-align: center;
+    }
   
     header {
       text-align: center;
@@ -19,8 +26,6 @@
       .article-title {
         font-size: 2.5rem;
         margin-bottom: 8px;
-        font-family: $font-title;
-        color: $main;
       }
   
       .article-subtitle {
@@ -42,27 +47,23 @@
       text-align: center;
     }
     
-    h2 {
-      text-align: center;
-    }
- 
-    .introduction{
+    section:not(:has(ul)):not(:has(blockquote)){
       display: flex;
       flex-direction: row;
-    }
-    
-    .introduction p:first-child {
-      font-weight: bold; 
-      font-size: 1.2em;
-      min-width: 200px;
+
+      p:first-child {
+        font-weight: bold; 
+        font-size: 1.2em;
+        min-width: 200px;
+        margin-right: 16px;
+      }
     }
 
-    p {
-      margin: 16px;
+    :is(p, ul, blockquote){
+      margin: 16px 0;
     }
     
     ul {
-      margin: 16px 0;
       padding-left: 40px;
 
       li {
@@ -76,7 +77,6 @@
       border-left: 4px solid $highlight;
       padding-left: 16px;
       color: $main;
-      margin: 16px 0;
 
       span {
         display: block;
