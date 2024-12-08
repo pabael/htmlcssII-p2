@@ -8,3 +8,14 @@ $font-title: "Arima";
 $background: #c6e8ee;
 $main: #014452;
 $highlight: #1e7268;
+
+$card-bg: $background; 
+
+$form-main-color: color(display-p3 0.45 0.15 0.1);
+$form-accent: hwb(220 30% 20%);
+
+$input-border-color: $form-main-color;
+$input-bg-color: rgba(255, 255, 255, 0.8);
+$form-check-input-border: 1px solid $form-main-color;
+$form-label-color: $form-main-color;
+$primary: $form-accent;

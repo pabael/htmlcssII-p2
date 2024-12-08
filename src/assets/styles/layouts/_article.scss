@@ -5,7 +5,6 @@
     max-width: 100%;
     margin: 0 auto;
     line-height: 1.6;
-    color: #333;
     container-type: inline-size;
 
     :is(h1, h2, h3) {
@@ -15,18 +14,18 @@
     }
   
     header {
-      text-align: center;
+      padding: 10px;
       margin-bottom: 24px;
-      padding: 20px;
-  
+      text-align: center;
+
       figure img{
         max-width: 300px;
         height: auto;
       }
   
       .article-title {
-        font-size: 2.5rem;
         margin-bottom: 8px;
+        font-size: 2.5rem;
       }
   
       .article-subtitle {
@@ -36,34 +35,12 @@
     }
 
     section, footer{
-      text-align: justify;
-      margin: auto;
       max-width: 50%;
+      margin: auto;
       font-size: 1em;
+      text-align: justify;
     }
 
-    footer ul{
-      border: 2px solid $highlight; 
-      padding: 8px;
-      text-align: center;
-    }
-    
-    section:not(:has(ul)):not(:has(blockquote)){
-      display: flex;
-      flex-direction: row;
-
-      p:first-child {
-        font-weight: bold; 
-        font-size: 1.2em;
-        min-width: 200px;
-        margin-right: 16px;
-      }
-    }
-
-    :is(p, ul, blockquote){
-      margin: 16px 0;
-    }
-    
     ul {
       padding-left: 0px;
 
@@ -73,11 +50,36 @@
       }
     }
 
+    footer ul{
+      padding: 8px;
+      color: #fff;
+      text-align: center;
+      background: linear-gradient-function();
+      border: 2px solid $highlight; 
+    }
+    
+    section:not(:has(ul)):not(:has(blockquote)){
+      display: flex;
+      flex-direction: row;
+
+      p:first-child {
+        min-width: 200px;
+        margin-right: 16px;
+        font-size: 1.2em;
+        font-weight: bold; 
+      }
+    }
+
+    :is(p, ul, blockquote){
+      margin: 16px 0;
+    }
+    
+
     blockquote {
-      font-style: italic;
-      border-left: 4px solid $highlight;
       padding-left: 16px;
+      font-style: italic;
       color: $main;
+      border-left: 4px solid $highlight;
 
       span {
         display: block;
@@ -88,10 +90,10 @@
     }
 
     section figure {
-      margin: 24px auto;
-      text-align: center;
       width: 80%;
       height: auto;
+      margin: 24px auto;
+      text-align: center;
       
       img {
         width: 100%;

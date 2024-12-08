@@ -10,6 +10,12 @@
 @import "variables";
 
 /**
+ * Import functions
+ */
+
+ @import "functions";
+
+/**
  * Import npm dependencies
  * see: https://v2.parceljs.org/features/module-resolution/
  * see commented examples below
@@ -18,7 +24,8 @@
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
 @import "npm:@fortawesome/fontawesome-free/css/all.css";
-@import 'node_modules/bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
 
 /**
  * Import layouts

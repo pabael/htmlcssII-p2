@@ -1,54 +1,65 @@
-.speakers-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@layer base, typography, layout, card, media;
 
-  h1 {
+@layer base {
+  .speakers-container {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@layer typography {
+  .speakers-container h1 {
     margin: 20px;
     font-family: $font-title;
     color: $main;
   }
-  
-  .speakers-list {
+}
+
+@layer layout {
+  .speakers-container .speakers-list {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
+    align-items: stretch;
+    justify-content: center;
+    width: 90vw;
     padding: 0;
     margin-top: 20px;
-    justify-content: center;
-    gap: 30px;
-    width: 90vw;
-    align-items: stretch;
     container-type: inline-size;
+  }
+}
 
-    .speaker{
-      list-style: none;
-      flex-grow: 1;
-      flex: 1 1 calc(33.333% - 32px);
-      text-align: center;
-      min-width: 300px;
+@layer card {
+  .speakers-container .speakers-list .speaker {
+    flex: 1 1 calc(33.333% - 32px);
+    flex-grow: 1;
+    min-width: 300px;
+    text-align: center;
+    list-style: none;
 
-      .card{
-        width: 100%;
-        height: 100%;
-        background-color: $background;
+    .card {
+      width: 100%;
+      height: 100%;
 
-        i {
-          color: $main;
-        }
-      }
-
-      .card:hover{
-        border-color: $highlight;
+      i {
+        color: $main;
       }
     }
 
-    @container(max-width: 400px){
-      .speaker{
-        width: 80%;
-        min-width: min-content;
-        flex: none;
-      }
+    .card:hover {
+      border-color: $highlight;
+    }
+  }
+}
+
+@layer media {
+  @container(max-width: 400px) {
+    .speakers-container .speakers-list .speaker {
+      flex: none;
+      width: 80%;
+      min-width: min-content;
     }
   }
 }

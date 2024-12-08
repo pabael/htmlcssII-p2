@@ -1,0 +1,3 @@
+@function linear-gradient-function() {
+  @return linear-gradient(to right, $main, $highlight);
+}
